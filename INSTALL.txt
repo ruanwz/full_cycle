@@ -1,0 +1,19 @@
+Build:
+sinan
+
+Release:
+sinan release
+
+cp -R _build/development/apps/hello_world-0.1.0/ full_cycle-0.1.0.0/lib/hello_world-0.1.0/
+cp -R _build/development/releases/ full_cycle-0.1.0.0/releases/
+cp full_cycle-0.1.0.0/lib/hello_world-0.1.0/ebin/hello_world.app full_cycle-0.1.0.0/lib/hello_world-0.1.0/ebin/hello_world-0.1.0.app
+
+Release:
+sinan release
+
+Install:
+sudo /usr/local/erlware/bin/faxien install-release full_cycle-0.1.0.0/
+
+Uninstall:
+sudo /usr/local/erlware/bin/faxien remove-release full_cycle-0.1.0.0/
+

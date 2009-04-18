@@ -1,0 +1,11 @@
+[{eunit,"2.0",
+        [stdlib],
+        "/usr/local/erlware/packages/5.6.3/lib/eunit-2.0"},
+ {stdlib,"1.15.3",
+         [kernel],
+         "/usr/local/erlware/packages/5.6.3/lib/stdlib-1.15.3"},
+ {kernel,"2.12.3",[],
+         "/usr/local/erlware/packages/5.6.3/lib/kernel-2.12.3"},
+ {hello_world,"0.1.0",
+              [kernel,stdlib,eunit],
+              "/home/david/test/erlware_project/full_cycle/_build/development/apps/hello_world-0.1.0"}].

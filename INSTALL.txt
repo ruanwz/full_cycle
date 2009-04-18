@@ -4,8 +4,8 @@ sinan
 Release:
 sinan release
 
-cp -R _build/development/apps/hello_world-0.1.0/ full_cycle-0.1.0.0/lib/hello_world-0.1.0/
-cp -R _build/development/releases/ full_cycle-0.1.0.0/releases/
+cp -R _build/development/apps/hello_world-0.1.0/ full_cycle-0.1.0.0/lib/
+cp -R _build/development/releases/ full_cycle-0.1.0.0/
 cp full_cycle-0.1.0.0/lib/hello_world-0.1.0/ebin/hello_world.app full_cycle-0.1.0.0/lib/hello_world-0.1.0/ebin/hello_world-0.1.0.app
 
 Release:

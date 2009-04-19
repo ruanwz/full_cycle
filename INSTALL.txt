@@ -1,9 +1,40 @@
+Create a Project:
+
+sinan gen
+Please specify your name
+your name> David Ruan
+Please specify your email address
+your email> ruanwz@gmail.com
+Please specify the copyright holder
+copyright holder [default David Ruan]>          
+Please specify name of your project
+project name> full_cycle
+Please specify the version of your project
+project version [default 0.1.0.0]> 
+Please specify the name the OTP app that you would like to create within this project.
+app> hello_world
+would you like to enter more y/n [default n]> 
+
+Add repositories into _build.cfg:
+repositories : ["http://repo.erlware.org/pub",
+        "http://www.martinjlogan.com/pub"],
+
+In lib/hello_world/ebin/hello_world.app, add hw_server into modules list.
+
+In lib/hello_world/src/tp_server_main_sup.erl, change following lines:
+    AChild = {'AName', {'AModule', start_link, []},
+              Restart, Shutdown, Type, ['AModule']},
+    {ok, {SupFlags, [AChild]}}.
+
 Build:
 sinan
 
+Add executable start script.
+
 Release:
 sinan release
-
+mkdir full_cycle-0.1.0.0
+mkdir full_cycle-0.1.0.0/lib
 cp -R _build/development/apps/hello_world-0.1.0/ full_cycle-0.1.0.0/lib/
 cp -R _build/development/releases/ full_cycle-0.1.0.0/
 cp full_cycle-0.1.0.0/lib/hello_world-0.1.0/ebin/hello_world.app full_cycle-0.1.0.0/lib/hello_world-0.1.0/ebin/hello_world-0.1.0.app
